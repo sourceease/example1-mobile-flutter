@@ -44,7 +44,7 @@ class _ContactDetailState extends State<ContactDetail> {
             height: MediaQuery.of(context).size.height / 2.5,
             width: double.infinity,
             decoration: const BoxDecoration(
-              color: Colors.white, // Adjust the color as needed
+              color: Colors.white,
               borderRadius: BorderRadius.vertical(bottom: Radius.circular(20)),
             ),
             child: Column(
