@@ -16,23 +16,23 @@ class _ContactDetailState extends State<ContactDetail> {
       backgroundColor: Colors.grey[700],
       appBar: AppBar(
         automaticallyImplyLeading: false,
-        title: Row(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            IconButton(
-              icon: const Icon(
+        title: GestureDetector(
+          onTap: () {
+            Navigator.pop(context);
+          },
+          child: const Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Icon(
                 Icons.arrow_back_ios,
                 size: 19,
               ),
-              onPressed: () {
-                Navigator.pop(context);
-              },
-            ),
-            const Text(
-              'Back',
-              style: TextStyle(fontSize: 16),
-            ),
-          ],
+              Text(
+                'Back',
+                style: TextStyle(fontSize: 16),
+              ),
+            ],
+          ),
         ),
       ),
       body: Column(
@@ -65,9 +65,9 @@ class _ContactDetailState extends State<ContactDetail> {
                   style: const TextStyle(
                       fontSize: 18, fontWeight: FontWeight.w500),
                 ),
-                const Text(
-                  'New Delhi',
-                  style: TextStyle(fontSize: 13),
+                Text(
+                  widget.data?.loc ?? '',
+                  style: const TextStyle(fontSize: 13),
                 ),
               ],
             ),

@@ -14,7 +14,7 @@ class ContactList extends StatefulWidget {
 
 List<ContactListModel> contactList = [];
 Future<List<ContactListModel>> getCntcsLst() async {
-  var url = 'https://mocki.io/v1/8158a3f7-2dc8-40ef-a181-0d90369f7e92';
+  var url = 'https://mocki.io/v1/38141c3c-df1f-4eda-9381-4e526f72133a';
   final response = await http.get(Uri.parse(url));
   var data = jsonDecode(response.body.toString());
   if (response.statusCode == 200) {

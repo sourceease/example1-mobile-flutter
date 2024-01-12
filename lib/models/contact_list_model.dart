@@ -9,12 +9,14 @@ class ContactListModel {
     String? lastNm;
     String? email;
     String? phNum;
+    String? loc;
 
     ContactListModel({
         this.fstNm,
         this.lastNm,
         this.email,
         this.phNum,
+        this.loc,
     });
 
     factory ContactListModel.fromJson(Map<String, dynamic> json) => ContactListModel(
@@ -22,6 +24,7 @@ class ContactListModel {
         lastNm: json["lastNm"],
         email: json["email"],
         phNum: json["phNum"],
+        loc: json["loc"],
     );
 
     Map<String, dynamic> toJson() => {
@@ -29,5 +32,6 @@ class ContactListModel {
         "lastNm": lastNm,
         "email": email,
         "phNum": phNum,
+        "loc": loc,
     };
 }
